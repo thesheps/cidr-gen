@@ -1,9 +1,9 @@
 from setuptools import setup
 
-setup(name='cidr-gen',
+setup(name='cidr-utils',
       version='0.1',
-      description='CIDR netblock generator and parser',
-      url='https://github.com/thesheps/cidr-gen',
+      description='CIDR and net-block utils',
+      url='https://github.com/thesheps/cidr-utils',
       author='Chris Shepherd',
       author_email='thesheps@gmail.com',
       license='MIT',
