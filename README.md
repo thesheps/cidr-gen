@@ -1,4 +1,4 @@
-# cidr-gen
+# cidr-utils
 CIDR netblock generator and parser.
 
 ## Description
