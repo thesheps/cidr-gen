@@ -9,7 +9,7 @@ class TestCidrParser(unittest.TestCase):
             ("10.0.0.0/24", 256),
             ("10.0.0.0/18", 16384),
             ("10.0.0.0/9", 8388608),
-            ("10.0.0.0/30", 4),
+            ("10.0.0.0/30", 4)
         ]
 
         for value, expected in test_cases:
