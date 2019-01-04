@@ -1,5 +1,5 @@
 import unittest
-from src.netmask_converter import to_netmask, to_cidr_prefix
+from src.netmask_converter import cidr_to_netmask, netmask_to_cidr_prefix
 
 
 class TestNetmaskConverter(unittest.TestCase):
@@ -21,7 +21,7 @@ class TestNetmaskConverter(unittest.TestCase):
 
         for value, expected in test_cases:
             with self.subTest(value=value):
-                prefix = to_cidr_prefix(value)
+                prefix = netmask_to_cidr_prefix(value)
                 self.assertEqual(prefix, expected)
 
     def test_cidr_block_returns_correct_netmask(self):
@@ -42,5 +42,5 @@ class TestNetmaskConverter(unittest.TestCase):
 
         for value, expected in test_cases:
             with self.subTest(value=value):
-                netmask = to_netmask(value)
+                netmask = cidr_to_netmask(value)
                 self.assertEqual(netmask, expected)
