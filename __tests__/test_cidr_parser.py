@@ -15,4 +15,4 @@ class TestCidrParser(unittest.TestCase):
         for value, expected in test_cases:
             with self.subTest(value=value):
                 ips = to_ip_range(value)
-                self.assertEqual(len(ips), expected)
+                self.assertEqual(ips, expected)

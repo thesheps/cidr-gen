@@ -1,6 +1,10 @@
-def cidr_to_netmask(cidr):
+def cidr_to_binary(cidr):
     length = int(cidr.split("/")[-1])
-    binary = length * "1" + (32 - length) * "0"
+    return length * "1" + (32 - length) * "0"
+
+
+def cidr_to_netmask(cidr):
+    binary = cidr_to_binary(cidr)
     octets = [binary[i:i+8] for i in range(0, len(binary), 8)]
     return ".".join(str(int(s, 2)) for s in octets)
 
